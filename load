@@ -1,0 +1,8 @@
+local PlaceId = game.PlaceId
+if PlaceId == 2753915549 then -- blox 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/binhsitink/pearhub/main/bloxfruit"))()
+elseif PlaceId == 4442272183 then -- Blox 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/binhsitink/pearhub/main/bloxfruit"))()
+elseif PlaceId == 7449423635 then -- Blox 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/binhsitink/pearhub/main/bloxfruit"))()
+end
