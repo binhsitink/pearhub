@@ -5,4 +5,6 @@ elseif PlaceId == 4442272183 then -- Blox
     loadstring(game:HttpGet("https://raw.githubusercontent.com/binhsitink/pearhub/main/bloxfruit"))()
 elseif PlaceId == 7449423635 then -- Blox 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/binhsitink/pearhub/main/bloxfruit"))()
+elseif PlaceId == 4483381587 then -- base
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end
