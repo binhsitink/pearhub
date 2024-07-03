@@ -1,0 +1,196 @@
+local existingGui = game.Players.LocalPlayer.PlayerGui:FindFirstChild("MyScreenGui")
+if existingGui then
+    existingGui:Destroy()
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MyScreenGui"
+screenGui.Parent = game.Players.LocalPlayer.PlayerGui
+ 
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0.4, 0, 0.4, 0)
+frame.Position = UDim2.new(0.35, 0, 0.28, 0)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BorderColor3 = Color3.new(255, 255, 0)
+frame.BorderSizePixel = 3 
+frame.Parent = screenGui
+ 
+local imageLabel = Instance.new("ImageLabel")
+imageLabel.Size = UDim2.new(0.4, 0, 0.8, 0)  
+imageLabel.Position = UDim2.new(0.01, 0, 0.18, 0)
+imageLabel.BackgroundTransparency = 1 
+imageLabel.Image = "rbxthumb://type=Asset&id=18289240401&w=150&h=150" 
+imageLabel.Parent = frame
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0.1, 0, 0.2, 0)
+closeButton.Position = UDim2.new(0.9, 0, 0, 0)
+closeButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.Font = Enum.Font.GothamBlack
+closeButton.TextSize = 24
+closeButton.BorderSizePixel = 0
+closeButton.Parent = frame
+
+local imageLabelCorner = Instance.new("UICorner")
+imageLabelCorner.CornerRadius = UDim.new(0, 8)
+imageLabelCorner.Parent = imageLabel
+ 
+ local title = Instance.new("TextLabel")
+title.Size = UDim2.new(0.8, 0, 0.1, 0)
+title.Position = UDim2.new(0.1, 0, 0.12, 0)
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 0) 
+title.Text = ""
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 0
+title.BorderSizePixel = 0 
+title.Parent = frame
+ 
+ 
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(0.8, 0, 0.2, 0)
+title.Position = UDim2.new(0.1, 0.19, 0, 0)
+title.BackgroundColor3 = Color3.new(0, 0, 0)
+title.Text = "pear hub-(get key)"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 24
+title.BorderSizePixel = 0
+title.Parent = frame
+ 
+local textBox = Instance.new("TextBox")
+textBox.Size = UDim2.new(0.6, 0., 0.2, 0.3)
+textBox.Position = UDim2.new(0.38, 0, 0.3, 0)
+textBox.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+textBox.Text = "____________________"
+textBox.TextColor3 = Color3.new(1, 1, 1)
+textBox.Font = Enum.Font.GothamBlack
+textBox.TextSize = 18
+textBox.Parent = frame
+ 
+-- Bo góc cho textBox
+local textBoxCorner = Instance.new("UICorner")
+textBoxCorner.CornerRadius = UDim.new(0, 6)
+textBoxCorner.Parent = textBox
+ 
+local enterKeyButton = Instance.new("TextButton")
+enterKeyButton.Size = UDim2.new(0.29, 0, 0.15, 0)
+enterKeyButton.Position = UDim2.new(0.38, 0, 0.55, 0)
+enterKeyButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+enterKeyButton.Text = "Enter Key"
+enterKeyButton.TextColor3 = Color3.new(1, 1, 1)
+enterKeyButton.Font = Enum.Font.GothamBlack
+enterKeyButton.TextSize = 18
+enterKeyButton.Parent = frame
+ 
+-- Bo góc cho enterKeyButton
+local enterKeyButtonCorner = Instance.new("UICorner")
+enterKeyButtonCorner.CornerRadius = UDim.new(0, 6)
+enterKeyButtonCorner.Parent = enterKeyButton
+ 
+local getKeyButton = Instance.new("TextButton")
+getKeyButton.Size = UDim2.new(0.29, 0, 0.15, 0)
+getKeyButton.Position = UDim2.new(0.69, 0, 0.55, 0)
+getKeyButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+getKeyButton.Text = "Get Key"
+getKeyButton.TextColor3 = Color3.new(1, 1, 1)
+getKeyButton.Font = Enum.Font.GothamBlack
+getKeyButton.TextSize = 18
+getKeyButton.Parent = frame
+ 
+-- Bo góc cho getKeyButton
+local getKeyButtonCorner = Instance.new("UICorner")
+getKeyButtonCorner.CornerRadius = UDim.new(0, 6)
+getKeyButtonCorner.Parent = getKeyButton
+ 
+local function setClipboardWithURL()
+    setclipboard("chicheat")
+end
+ 
+local getKeyButton = Instance.new("TextButton")
+getKeyButton.Size = UDim2.new(0.6, 0, 0.15, 0)
+getKeyButton.Position = UDim2.new(0.38, 0, 0.72, 0)
+getKeyButton.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+getKeyButton.Text = "copy discord sever"
+getKeyButton.TextColor3 = Color3.new(1, 1, 1)
+getKeyButton.Font = Enum.Font.GothamBlack
+getKeyButton.TextSize = 18
+getKeyButton.Parent = frame
+ 
+-- Bo góc cho getKeyButton
+local getKeyButtonCorner = Instance.new("UICorner")
+getKeyButtonCorner.CornerRadius = UDim.new(0, 6)
+getKeyButtonCorner.Parent = getKeyButton
+ 
+local function setClipboardWithURL()
+    setclipboard("discord")
+end
+ 
+getKeyButton.MouseButton1Click:Connect(setClipboardWithURL)
+ 
+local function sendNotification(title, text, duration)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = title;
+        Text = text;
+        Duration = duration;
+    })
+end
+
+local function enterKey()
+    local userInputKey = textBox.Text
+    local correctKey = "pearhub-f723r54365453117tb353t4gj7hrh9435r7"
+ 
+    if userInputKey == correctKey then
+        local scriptURL = "https://raw.githubusercontent.com/binhsitink/pearhub/main/load"
+        local success, result = pcall(function()
+            return loadstring(game:HttpGet(scriptURL))()
+        end)
+ 
+        if success then
+            screenGui:Destroy()
+        else
+            sendNotification("Error", "Failed to load script. Check the console for details.", 10)
+        end
+    else
+        sendNotification("Wrong Key", "You entered the wrong key!", 10)
+    end
+end
+ 
+enterKeyButton.MouseButton1Click:Connect(enterKey)
+ 
+closeButton.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
+ 
+local dragging, dragInput, dragStart, startPos
+ 
+local function update(input)
+    local delta = input.Position - dragStart
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+ 
+title.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging, dragStart, startPos = true, input.Position, frame.Position
+ 
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+ 
+title.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+ 
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if dragging and input == dragInput then
+        update(input)
+    end
+end)
